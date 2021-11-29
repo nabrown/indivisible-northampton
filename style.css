@@ -1,0 +1,192 @@
+/*
+ Theme Name:   Individisible Northampton (2020 Child)
+ Theme URI:    https://norabrowndesign.com
+ Description:  Theme for Indivisible Northampton (Child of Twenty Twenty)
+ Author:       Nora Brown
+ Author URI:   https://norabrowndesign.com
+ Template:     twentytwenty
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentychild
+*/
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;900&display=swap');
+:root {
+  --black: #292929;
+  --blue: #519ed4;
+  --blue_light: #8ec2ed;
+  --blue_dark: #266e9f;
+  --red: #CA4948;
+  --main-gradient: linear-gradient(150deg, var(--red), var(--blue));
+}
+body, .entry-title a, :root .has-primary-color {
+  color: var(--black);
+}
+
+#site-header {
+  padding-left: 80px;
+  background: #FFF url(css-img/indivisible-logo.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.site-title a {
+  font-size: 36px;
+}
+body:not(.overlay-header) .primary-menu > li > a {
+  color: var(--blue_dark);
+}
+.entry-content, .footer-widgets .widget *:not(h2,h3,h4,h5){
+  font-family: Helvetica, sans-serif;
+}
+h1 {
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+[class*="__inner-container"] .frm_forms {
+  max-width: 100% !important;
+}
+#form_signup .frm_fields_container {
+  align-items: end;
+}
+#form_signup .frm_form_field {
+  grid-column-start: 1;
+  grid-column-end: 11;
+}
+#form_signup .frm_submit {
+  grid-column-start: 11;
+  grid-column-end: 13;
+}
+#form_signup .frm_submit button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+fieldset {
+  border: none;
+  background: #e6f4ff;
+  border-radius: 1em
+}
+
+.entry-content :is(h1, h2, h3, h4),
+h1, h2, h3, h4 {
+  font-family: 'Exo', sans-serif;
+  letter-spacing: 0;
+}
+
+.wp-block-cover-image h2, .wp-block-cover h2 {
+  font-size: 6.4rem;
+}
+
+.singular .entry-header {
+  background: unset;
+}
+.post-inner {
+  padding-top: 0;
+}
+.entry-content > .wp-block-group.alignwide.has-background, .entry-content > .wp-block-group.alignfull.has-background{
+  margin-top: 8rem;
+
+}
+.has-gradient-border {
+  background-clip: padding-box;
+  border: solid 5px transparent;
+  border-radius: 1em;
+}
+.has-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: var(--main-gradient);
+}
+
+.blocks-gallery-item:first-child img {
+  border-radius: 1em 0 0 1em;
+}
+.blocks-gallery-item:nth-child(n) .blocks-gallery-item__caption {
+  background: linear-gradient(0deg,rgb(46 62 148 / 90%),transparent);
+}
+.blocks-gallery-item:first-child .blocks-gallery-item__caption {
+  border-bottom-left-radius: 1em;
+}
+.blocks-gallery-item:last-child .blocks-gallery-item__caption {
+  border-bottom-right-radius: 1em;
+}
+.blocks-gallery-item:last-child img {
+  border-radius: 0 1em 1em 0;
+}
+#site-footer .section-inner {
+  display: block
+}
+.representatives {
+  padding-top: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.representatives h2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.representatives h3 {
+  font-size: 20px;
+}
+.representatives ul,
+.representatives li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.has-red-blue-gradient-background:is(button, a) {
+  background: var(--main-gradient);
+  border: 1px solid var(--blue_light);
+}
+#site-footer {
+  padding-bottom: 0;
+}
+.to-the-top {
+  display: block;
+  text-align: right;
+  padding: .5em;
+}
+.footer-credits {
+  background: var(--black);
+  color: #FFF;
+  justify-content: center;
+  padding: 2rem;
+}
+button, .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"] {
+  padding: .5em 1em;
+  border-radius: .5em;
+  color: #FFF;
+  font-family: 'Exo', sans-serif;
+  font-size: 2.4rem;
+  background-color: var(--blue);
+}
+.social-icons a {
+  background-color: var(--blue);
+}
+.color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus):first-letter, .wp-block-button.is-style-outline, a {
+  color: var(--blue_dark);
+}
+.clip-path_left {
+  clip-path: polygon(0 70%, 35% 100%, 100% 70%, 100% 0, 0 0);
+}
+.clip-path_right {
+  clip-path: polygon(0 70%, 65% 100%, 100% 70%, 100% 0, 0 0);
+}
+
+.entry-categories {
+  display: none;
+}
+.post-meta {
+  margin-bottom: 1em;
+}
+.wp-block-gallery + .wp-block-gallery{
+	margin-top: -4rem !important;
+}
